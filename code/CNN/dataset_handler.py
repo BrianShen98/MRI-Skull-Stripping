@@ -47,12 +47,7 @@ def load_data(num_of_patients,path):
             if diff != 13:
                 print(X_train_dir + file_name)
             square_file_array[:,diff:diff+img_width] = file_array
-
-            #add pixels at the beginning and end of the image
-            # file_array = np.append(file_array,np.zeros((img_height,diff)),axis = 1)
-            # test = np.zeros((img_height,diff))
-            # print(file_array.shape)
-            # file_array = np.insert(file_array,1,np.zeros((img_height,diff)),axis=1)
+           
             X_train.append(square_file_array)
        
         y_train_dir = os.path.join(path,str(idx),"stripped/")
@@ -71,12 +66,7 @@ def load_data(num_of_patients,path):
                 print(y_train_dir + file_name)
 
             square_file_array[:,diff:diff+img_width] = file_array
-
-            #add pixels at the beginning and end of the image
-            # file_array = np.append(file_array,np.zeros((img_height,diff)),axis = 1)
-            # test = np.zeros((img_height,diff))
-            # print(file_array.shape)
-            # file_array = np.insert(file_array,1,np.zeros((img_height,diff)),axis=1)
+            
             y_train.append(square_file_array)
 
 
